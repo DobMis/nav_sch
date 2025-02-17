@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {%load static%}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{% static 'favicon.png' %}" type="image/x-icon">
-    <title>1253</title>
-  </head>
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-        <h2>My name is Misha</h2>  
-        <h3>You'r welcome on my school's project site<h3>
-          <a href="/about/">
-            <button>Go to About Page</button>
-        </a>
-      
-    </main>
-  </body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Home - My Website{% endblock %}
+
+{% block content %}
+    <h1>Welcome to My Website</h1>
+    <p>My name is Misha</p>
+    <p>You're welcome on my school's project site</p>
+    <a href="{% url 'about' %}">
+        <button>Go to About Page</button>
+    </a>
+{% endblock %}

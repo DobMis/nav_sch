@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}  
+
+{% block title %}Карта школы{% endblock %}
+
+{% block content %}
+    <h1>Карта школы</h1>
+    <p>Здесь будет отображаться интерактивная карта.</p>
+    <img src="{% static 'nav_sch/images/1 1.svg' %}" alt="Карта школы" width="600">
+    <a href="{% url 'home' %}" class="btn">Вернуться на главную</a>
+    <h2>Выберите кабинет</h2>
+<ul class="room-list">
+    <li><a href="{% url 'room' room_number=101 %}">Кабинет 101</a></li>
+    <li><a href="{% url 'room' room_number=102 %}">Кабинет 102</a></li>
+    <li><a href="{% url 'room' room_number=103 %}">Кабинет 103</a></li>
+    <!-- Добавь другие кабинеты -->
+</ul>
+{% endblock %}

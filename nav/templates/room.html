@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}Кабинет {{ room_number }}{% endblock %}
+
+{% block content %}
+    <h1>Кабинет {{ room_number }}</h1>
+    <p>Вы находитесь в кабинете {{ room_number }}. Здесь можно будет добавить описание.</p>
+    <a href="{% url 'map' %}" class="btn">Вернуться на карту</a>
+{% endblock %}

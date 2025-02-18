@@ -9,8 +9,12 @@
 </head>
 <body>
     <nav>
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'about' %}">About</a>
+        <ul>
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'about' %}">О нас</a></li>
+            <li><a href="{% url 'map' %}">Карта</a></li>
+            <li><a href="{% url 'rooms' %}">Кабинеты</a></li>
+        </ul>
     </nav>
     <div>
         {% block content %}
